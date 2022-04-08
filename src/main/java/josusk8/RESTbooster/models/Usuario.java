@@ -4,7 +4,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.List;
+
 
 
 /**
@@ -35,24 +35,7 @@ public class Usuario implements Serializable {
 
 	private String sexo;
 
-	//bi-directional many-to-one association to Rm
-	@ManyToOne
-	@JoinColumn(name="rmCleanJerk" , insertable = false, updatable = false)
-	private Rm rm1;
-
-	//bi-directional many-to-one association to Rm
-	@ManyToOne
-	@JoinColumn(name="rmSnatch" , insertable = false, updatable = false)
-	private Rm rm2;
-
-	//bi-directional many-to-one association to Rm
-	@ManyToOne
-	@JoinColumn(name="rmSquat",  insertable = false, updatable = false)
-	private Rm rm3;
-
-	//bi-directional many-to-one association to Wod
-	@OneToMany(mappedBy="usuarioBean")
-	private List<Wod> wods;
+	
 
 	public Usuario() {
 	}
@@ -121,50 +104,6 @@ public class Usuario implements Serializable {
 		this.sexo = sexo;
 	}
 
-	public Rm getRm1() {
-		return this.rm1;
-	}
 
-	public void setRm1(Rm rm1) {
-		this.rm1 = rm1;
-	}
-
-	public Rm getRm2() {
-		return this.rm2;
-	}
-
-	public void setRm2(Rm rm2) {
-		this.rm2 = rm2;
-	}
-
-	public Rm getRm3() {
-		return this.rm3;
-	}
-
-	public void setRm3(Rm rm3) {
-		this.rm3 = rm3;
-	}
-
-	public List<Wod> getWods() {
-		return this.wods;
-	}
-
-	public void setWods(List<Wod> wods) {
-		this.wods = wods;
-	}
-
-	public Wod addWod(Wod wod) {
-		getWods().add(wod);
-		wod.setUsuarioBean(this);
-
-		return wod;
-	}
-
-	public Wod removeWod(Wod wod) {
-		getWods().remove(wod);
-		wod.setUsuarioBean(null);
-
-		return wod;
-	}
 
 }
