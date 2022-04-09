@@ -16,11 +16,11 @@ public interface RmSquatRepository extends CrudRepository<RmSquat, Integer> {
 	 
 	
 	@Transactional
-	ArrayList<RmSquat> findByidUsuario(Integer user);
+	ArrayList<RmSquat> findByIdUsuario(Integer user);
 
-	/*
+	
 	@Transactional
-	Optional<RmSquat> findByidUsuarioAndidRmSquat(Integer idU, Integer id);
-*/
+	Optional<RmSquat> findByIdUsuarioAndIdRmSquat(Integer idU, Integer id);
+
 
 }

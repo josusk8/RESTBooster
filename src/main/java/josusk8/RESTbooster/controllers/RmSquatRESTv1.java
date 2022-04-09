@@ -38,16 +38,16 @@ public class RmSquatRESTv1 {
 	
 	
 	@GetMapping (path = "/{idU}")
-	public ArrayList<RmSquat>findByIdu(@PathVariable("idU") int idU){
-		return this.rmSquatService.findByidUsuario(idU);
+	public ArrayList<RmSquat>findByIdUsuario(@PathVariable("idU") int idU){
+		return this.rmSquatService.findByIdUsuario(idU);
 	}
-	/*
+	
 	
 	@GetMapping (path = "/{idU}/{id}")
-	public Optional<RmSquat>findByidUsuarioAndidRmSquat(@PathVariable("idU") int idU,@PathVariable("id") int id ){
-		return this.rmSquatService.findByidUsuarioAndidRmSquat(idU,id);
+	public Optional<RmSquat>findByIdUsuarioAndIdRmSquat(@PathVariable("idU") int idU,@PathVariable("id") int id ){
+		return this.rmSquatService.findByIdUsuarioAndIdRmSquat(idU,id);
 	}
-	*/
+	
 	
 	
 	@PostMapping 
