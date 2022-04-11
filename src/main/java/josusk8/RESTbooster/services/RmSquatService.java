@@ -25,13 +25,19 @@ public class RmSquatService implements GenericServiceInterface<RmSquat, Integer>
 	
 	
 	public ArrayList<RmSquat> findByIdUsuario(Integer user){
-		return rmSquatRepository.findByIdUsuario(user);
+		return rmSquatRepository.findByIdUsuarioOrderByPesoDesc(user);
 		
 	}
 	
 
 	public Optional<RmSquat> findByIdUsuarioAndIdRmSquat( Integer idU, Integer id){
 		return rmSquatRepository.findByIdUsuarioAndIdRmSquat(idU, id);
+		
+	}
+	
+	
+	public Optional<RmSquat> deleteByIdUsuarioAndIdRmSquat( Integer idU, Integer id){
+		return rmSquatRepository.deleteByIdUsuarioAndIdRmSquat(idU, id);
 		
 	}
 	

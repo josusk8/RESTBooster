@@ -55,11 +55,11 @@ public class RmSquatRESTv1 {
 		return this.rmSquatService.save(rmSquat);
 	}
 	
-	@DeleteMapping (path = "/{id}")
-	public ResponseEntity<?> delete(@PathVariable Integer id){
+	@DeleteMapping (path = "/{idU}/{id}")
+	public ResponseEntity<?> ddeleteByIdUsuarioAndIdRmSquat(@PathVariable("idU") int idU,@PathVariable("id") int id ){
 		Optional<RmSquat> opt = rmSquatService.findById(id);
 		if(opt.isPresent()) {
-			rmSquatService.deleteById(id);
+			rmSquatService.deleteByIdUsuarioAndIdRmSquat(idU, id);
 			return ResponseEntity.ok("rmSquat borrado");	
 		}else {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("el id del registro no existe");

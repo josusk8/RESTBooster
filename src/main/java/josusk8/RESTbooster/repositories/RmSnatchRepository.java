@@ -7,22 +7,22 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import josusk8.RESTbooster.models.RmSquat;
+import josusk8.RESTbooster.models.RmSnatch;
+
 
 
 
 @Repository
-public interface RmSquatRepository extends CrudRepository<RmSquat, Integer> {
+public interface RmSnatchRepository extends CrudRepository<RmSnatch, Integer> {
 	 
 	
 	@Transactional
-	ArrayList<RmSquat> findByIdUsuarioOrderByPesoDesc(Integer user);
+	ArrayList<RmSnatch> findByIdUsuarioOrderByPesoDesc(Integer user);
 
 	
 	@Transactional
-	Optional<RmSquat> findByIdUsuarioAndIdRmSquat(Integer idU, Integer id);
-
+	Optional<RmSnatch> findByIdUsuarioAndIdRmSnatch(Integer idU, Integer id);
 
 	@Transactional
-	Optional<RmSquat> deleteByIdUsuarioAndIdRmSquat(Integer idU, Integer id);
+	Optional<RmSnatch> deleteByIdUsuarioAndIdRmSnatch(Integer idU, Integer id);
 }
