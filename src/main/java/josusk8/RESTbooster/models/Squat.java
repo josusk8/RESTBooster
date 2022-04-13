@@ -16,6 +16,7 @@ public class Squat implements Serializable {
 
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idSquat;
 
 	private int idWod;

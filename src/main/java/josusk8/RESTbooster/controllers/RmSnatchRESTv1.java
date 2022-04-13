@@ -23,7 +23,7 @@ import josusk8.RESTbooster.services.RmSnatchService;
 
 
 @RestController
-@RequestMapping("/booster/v1/rmSnatch")
+@RequestMapping("/booster/v1/rm/snatch")
 public class RmSnatchRESTv1 {
 	
 	

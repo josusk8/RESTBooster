@@ -18,7 +18,6 @@ public interface RmSnatchRepository extends CrudRepository<RmSnatch, Integer> {
 	
 	@Transactional
 	ArrayList<RmSnatch> findByIdUsuarioOrderByPesoDesc(Integer user);
-
 	
 	@Transactional
 	Optional<RmSnatch> findByIdUsuarioAndIdRmSnatch(Integer idU, Integer id);

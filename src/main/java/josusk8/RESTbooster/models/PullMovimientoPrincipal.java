@@ -16,6 +16,7 @@ public class PullMovimientoPrincipal implements Serializable {
 
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idPullmovimientoprincipal;
 
 	private int idWod;

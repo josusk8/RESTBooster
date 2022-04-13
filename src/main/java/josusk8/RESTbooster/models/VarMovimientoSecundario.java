@@ -16,6 +16,7 @@ public class VarMovimientoSecundario implements Serializable {
 
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idVarmovimientosecundario;
 
 	private int idWod;

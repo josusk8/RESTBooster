@@ -23,7 +23,7 @@ import josusk8.RESTbooster.services.RmSquatService;
 
 
 @RestController
-@RequestMapping("/booster/v1/rmSquat")
+@RequestMapping("/booster/v1/rm/squat")
 public class RmSquatRESTv1 {
 	
 	
@@ -56,7 +56,7 @@ public class RmSquatRESTv1 {
 	}
 	
 	@DeleteMapping (path = "/{idU}/{id}")
-	public ResponseEntity<?> ddeleteByIdUsuarioAndIdRmSquat(@PathVariable("idU") int idU,@PathVariable("id") int id ){
+	public ResponseEntity<?> deleteByIdUsuarioAndIdRmSquat(@PathVariable("idU") int idU,@PathVariable("id") int id ){
 		Optional<RmSquat> opt = rmSquatService.findById(id);
 		if(opt.isPresent()) {
 			rmSquatService.deleteByIdUsuarioAndIdRmSquat(idU, id);

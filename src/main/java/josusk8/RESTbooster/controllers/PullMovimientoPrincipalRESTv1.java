@@ -23,7 +23,7 @@ import josusk8.RESTbooster.services.PullMovimientoPrincipalService;
 
 
 @RestController
-@RequestMapping("/booster/v1/PullMovimientoPrincipal")
+@RequestMapping("/booster/v1/mov/pullprincipal")
 public class PullMovimientoPrincipalRESTv1 {
 	
 	

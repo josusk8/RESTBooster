@@ -23,7 +23,7 @@ import josusk8.RESTbooster.services.RmCleanJerkService;
 
 
 @RestController
-@RequestMapping("/booster/v1/rmCleanJerk")
+@RequestMapping("/booster/v1/rm/cleanjerk")
 public class RmCleanJerkRESTv1 {
 	
 	

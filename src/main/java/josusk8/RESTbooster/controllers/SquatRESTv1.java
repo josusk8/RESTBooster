@@ -23,7 +23,7 @@ import josusk8.RESTbooster.services.SquatService;
 
 
 @RestController
-@RequestMapping("/booster/v1/Squat")
+@RequestMapping("/booster/v1/mov/squat")
 public class SquatRESTv1 {
 	
 	

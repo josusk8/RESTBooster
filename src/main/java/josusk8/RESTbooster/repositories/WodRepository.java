@@ -1,28 +1,30 @@
 package josusk8.RESTbooster.repositories;
 
+
+
+
+
 import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
-import josusk8.RESTbooster.models.Squat;
-
+import josusk8.RESTbooster.models.Wod;
 
 
 
 @Repository
-public interface SquatRepository extends CrudRepository<Squat, Integer> {
+public interface WodRepository extends CrudRepository<Wod, Integer> {
 	 
-	
-	@Transactional
-	ArrayList<Squat> findByIdWod(Integer user);
-
-	
-	@Transactional
-	Optional<Squat> findByIdWodAndIdSquat(Integer idWod, Integer id);
 
 	@Transactional
-	Optional<Squat> deleteByIdWodAndIdSquat(Integer idWod, Integer id);
+	ArrayList<Wod> findByIdUsuario(Integer user);
+
+	@Transactional
+	Optional<Wod> findByIdUsuarioAndIdWod(Integer idU, Integer id);
+	
+	@Transactional
+	Optional<Wod> deleteByIdUsuarioAndIdWod(Integer idU, Integer id);
+
 }
