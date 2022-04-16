@@ -20,7 +20,7 @@ public class Wod implements Serializable {
 	
 	private int idUsuario;
 
-	private byte check;
+	//private String check;
 
 	private String comentario;
 
@@ -50,14 +50,15 @@ public class Wod implements Serializable {
 		this.idUsuario = idUsuario;
 	}
 
-	public byte getCheck() {
+	
+	/*public String getCheck() {
 		return check;
 	}
 
-	public void setCheck(byte check) {
+	public void setCheck(String check) {
 		this.check = check;
 	}
-
+*/
 	public String getComentario() {
 		return comentario;
 	}
