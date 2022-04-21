@@ -23,7 +23,7 @@ import josusk8.RESTbooster.services.VarMovimientoSecundarioService;
 
 
 @RestController
-@RequestMapping("/booster/v1/mov/varsecunadario")
+@RequestMapping("/booster/v1/mov/varsecundario")
 public class VarMovimientoSecundarioRESTv1 {
 	
 	

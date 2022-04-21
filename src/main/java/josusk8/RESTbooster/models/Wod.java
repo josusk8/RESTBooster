@@ -30,6 +30,8 @@ public class Wod implements Serializable {
 	private Date fecha;
 
 	private int semana;
+	
+	private int check;
 
 	public Wod() {
 	}
@@ -40,6 +42,14 @@ public class Wod implements Serializable {
 
 	public void setIdWod(int idWod) {
 		this.idWod = idWod;
+	}
+
+	public int getCheck() {
+		return check;
+	}
+
+	public void setCheck(int check) {
+		this.check = check;
 	}
 
 	public int getIdUsuario() {
