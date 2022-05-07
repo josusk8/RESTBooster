@@ -20,7 +20,6 @@ public class Wod implements Serializable {
 	
 	private int idUsuario;
 
-	//private String check;
 
 	private String comentario;
 
@@ -31,7 +30,7 @@ public class Wod implements Serializable {
 
 	private int semana;
 	
-	private int check;
+	private int completo;
 
 	public Wod() {
 	}
@@ -44,12 +43,12 @@ public class Wod implements Serializable {
 		this.idWod = idWod;
 	}
 
-	public int getCheck() {
-		return check;
+	public int getCompleto() {
+		return completo;
 	}
 
-	public void setCheck(int check) {
-		this.check = check;
+	public void setCompleto(int completo) {
+		this.completo = completo;
 	}
 
 	public int getIdUsuario() {
@@ -60,15 +59,7 @@ public class Wod implements Serializable {
 		this.idUsuario = idUsuario;
 	}
 
-	
-	/*public String getCheck() {
-		return check;
-	}
 
-	public void setCheck(String check) {
-		this.check = check;
-	}
-*/
 	public String getComentario() {
 		return comentario;
 	}
